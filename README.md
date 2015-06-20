@@ -1,7 +1,7 @@
 Haml2Html
 =============
 
-An easy to use compiler for developing with Haml & Sass without Rails.
+An easy to use compiler for developing static pages with Haml & Sass.
 
 Requirements
 -----------
