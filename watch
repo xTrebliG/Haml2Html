@@ -1,0 +1,2 @@
+echo "Watching App For Changes..."
+fswatch-run app './lib/compile.sh'

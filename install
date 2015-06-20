@@ -1,0 +1,5 @@
+brew install fswatch
+echo "Watcher Installed"
+echo "Installing Haml..."
+gem install haml
+echo "Haml Installed"
