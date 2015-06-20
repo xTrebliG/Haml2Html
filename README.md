@@ -1,7 +1,7 @@
 Haml2Html
 =============
 
-An easy to use tool for developing with HAML.
+An easy to use compiler for developing with Haml & Sass without Rails.
 
 Requirements
 -----------
@@ -34,11 +34,17 @@ The following are required(all commands ran in terminal):
   gem install haml
   ```
 
+* <a href="http://sass-lang.com/install" target="_blank">Sass</a>
+
+ ```
+  gem install sass
+  ```
+  
 Installation
 -----------
 0. Clone the repository to your local machine.
 0. Cd into ` /haml2html `.
-0. You may need to run
+0. Run
   ```
   ./install
   ```
@@ -48,11 +54,21 @@ Usage
 -----
 Save all .haml files in  ` /app/views `
 
+Save all .sass files in   `/app/styles `
+
 To watch your files run(in your terminal):
 ```
 ./watch
 ```
 
+To stop watching:
+
+```
+Control + C 
+```
+
 Thats it!
 
-All compiled haml files are stored in `/compiled/`
+All compiled Haml files are stored in `/compiled/`
+
+All compiled Sass files are stored in `/compiled/styles/`
