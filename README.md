@@ -24,4 +24,4 @@ To watch your files run:
 
 Thats it!
 
-All compiled haml files are stored in `/compiled/views/`
+All compiled haml files are stored in `/compiled/`
