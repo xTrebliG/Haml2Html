@@ -1,6 +1,6 @@
 echo "$(date) - Compilation begun..."
 #COMPILE HAML FILE
-	COMPILED="compiled"
+	COMPILED_HAML="compiled"
 	files=`find app/views -name '*.haml'`
 		#LOOPS THOUGH ALL FILES WITH .HAML 
 			for i in $files;
@@ -10,7 +10,7 @@ echo "$(date) - Compilation begun..."
 			  #DUPLICATES FILE NAME WITH .HTML 
 			  haml_name="${search/.haml/$html}"
 			  #CREATES OUTPUT PATH
-			  OUTPUT="${COMPILED}/${haml_name##*/}"
+			  OUTPUT="${COMPILED_HAML}/${haml_name##*/}"
 			  #COMPILES HAML FILES TO HTML FILES	
 			  haml $i $OUTPUT
 			done
