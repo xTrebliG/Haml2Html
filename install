@@ -1,2 +1,61 @@
-brew install fswatch
-echo "Watcher Installed"
+#CHECKS IF RUBY IS INSTALLED
+echo "Checking for Ruby..."
+	CHECK_RUBY="gem list ruby -i"
+	if $CHECK_RUBY; then
+		echo "Ruby already installed."
+	else
+		echo "Ruby not installed."
+		echo "Installing Ruby..."
+		brew install rbenv ruby-build
+		echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+		source ~/.bash_profile
+		rbenv install 2.2.2
+		rbenv global 2.2.2
+		echo "RUBY INSTALLATION COMPLETE"
+	fi
+#CHECKS IF HOMEBREW IS INSTALLED	
+echo "Checking for Homebrew..."
+	if which brew 2> /dev/null; then
+	  echo "Homebrew already installed."
+	else
+		echo "Homebrew not installed."
+		echo "Installing Homebrew..."
+		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		brew doctor
+		echo "HOMEBREW INSTALLATION COMPLETE"
+	fi
+#CHECKS IF HAML IS INSTALLED
+echo "Checking for Haml..."
+	CHECK_HAML="gem list haml -i"
+	if $CHECK_HAML; then
+		echo "Haml already installed."
+	else
+		echo "Haml not installed."
+		echo "Installing Haml..."
+		gem install haml
+		echo "HAML INSTALLATION COMPLETE"
+	fi
+#CHECKS IF SASS IS INSTALLED	
+echo "Checking for Sass..."
+	CHECK_SASS="gem list sass -i"
+	if $CHECK_SASS; then
+		echo "Sass already installed."
+	else
+		echo "Sass not installed."
+		echo "Installing Sass..."
+		gem install sass
+		echo "SASS INSTALLATION COMPLETE"
+	fi
+#CHECKS IF FSWATCH IS INSTALLED
+echo "Checking for fswatch.."
+	if which fswatch 2> /dev/null; then
+		echo "Fswatch is already installed."
+	else
+		echo "Fswatch is not installed."
+		echo "Installing fswatch..."
+		brew install fswatch
+		echo "FSWATCH INSTALLATION COMPLETE"
+	fi
+#COMPLETION MESSAGE	
+echo "INSTALLATION COMPLETE!"
+echo "USER './watch' TO START WATCH!"
