@@ -1,2 +1,3 @@
+echo "=>Use Ctrl-C to stop watcher"
 echo "Watching App For Changes..."
 fswatch-run app './lib/compile.sh'
