@@ -6,7 +6,7 @@ An easy to use compiler for developing static pages with Haml & Sass.
 Requirements
 -----------
 
-The following are required(all commands ran in terminal):
+The following are required:
 
 * <a href="https://gorails.com/setup/osx/10.10-yosemite/#homebrew" target="_blank">Homebrew</a>
 
